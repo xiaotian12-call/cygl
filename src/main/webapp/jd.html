@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>jQuery步骤节点进度条代码 - 源码之家</title>
+
+    <link rel="stylesheet" href="css/ystep.css">
+
+</head>
+<body>
+
+<h1>不显示按钮，可点击进度条节点</h1>
+
+<!-- 菜单及分页容器-->
+<div class="stepCont stepCont1">
+    <!-- 菜单导航显示-->
+    <div class='ystep-container ystep-lg ystep-blue'></div>
+    <!-- 分页容器-->
+    <div class="pageCont">
+        <div id="page1" class="stepPage">
+            <h1>项目申请</h1>
+        </div>
+        <div id="page2" class="stepPage">
+            <h1>指导教师审核</h1>
+        </div>
+        <div id="page3" class="stepPage">
+            <h1>专家评审</h1>
+        </div>
+        <div id="page4" class="stepPage">
+            <h1>中期检查</h1>
+        </div>
+        <div id="page5" class="stepPage">
+            <h1>结题验收</h1>
+        </div>
+        <div id="page6" class="stepPage">
+            <h1>结题审核</h1>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/setStep.js"></script>
+<script>
+    var step1=new SetStep({
+        content:'.stepCont1',
+        showBtn:false,
+    })
+    var step2=new SetStep({
+        content:'.stepCont2',
+        clickAble:false
+    })
+    var step3=new SetStep({
+        content:'.stepCont3'
+    })
+</script>
+
+<script type="javascript">
+    function SetStep(arg){
+        this.body=document.body;
+        this.opt = {
+            show:false,
+            content:'.stepCont',
+            pageCont:'.pageCont',
+            imgWidth:20,
+            stepContainerMar:20,
+            nextBtn:'.nextBtn',
+            prevBtn:'.prevBtn',
+            steps:['项目申请','指导教师审核','专家评审','中期检查','结题验收','结题审核'],
+            //pageClass:'',//分页的类或则id
+            stepCounts:6,//总共的步骤数
+            curStep:1,//当前显示第几页
+            animating:false,
+            showBtn:true,//是否生成上一步下一步操作按钮
+            clickAble:true,//是否可以通过点击进度条的节点操作进度
+            onLoad: function(){
+
+            }
+        }
+        this.init(arg)
+    }
+</script>
+</body>
+
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/layui/css/layui.css">
+    <style>
+        *,
+        body {
+            margin: 0 auto;
+            padding: 0;
+            font-size: 16px;
+            position: relative;
+            /*width: 100%;*/
+            height: auto;
+        }
+
+        .gd-top {
+            width: 100%;
+            min-width: 230px;
+            height: 210px;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .content{
+            border: 1px solid #f0f4f9;
+            box-shadow: 0 5px 15px rgb(125 136 156 / 15%);
+        }
+
+        .gd-top-01 {
+            width: 100%;
+            height: 180px;
+            background-color: #cbe8f8;
+        }
+
+        .gd-top-02 {
+            width: 100%;
+            height: 30px;
+            background-color: #0E6EC2;
+        }
+
+        .gd-top-01-top,
+        .gd-top-02-bottom {
+            width: 70%;
+            margin: 0 15%;
+            padding: 0;
+        }
+
+        .gd-top-02-bottom {
+            height: 30px;
+            background: url('static/images/home/lab.png') no-repeat;
+        }
+
+        .gd-top-01-top > img {
+            width: 100%;
+            height: 200px;
+            border: none;
+        }
+
+        .gd-container {
+            width: 100%;
+            height: auto;
+            margin: 10px 0 0 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .gd-main {
+            width: 90%;
+            margin: 0 15%;
+            padding: 0;
+        }
+
+        .gd-main-left,
+        .gd-main-right {
+            height: auto;
+            margin: 0;
+            padding: 0;
+            float: left;
+            overflow: hidden;
+        }
+
+        .gd-main-left {
+            width: 100%;
+            margin-left: -140px;
+        }
+
+        .gd-main-right {
+            width: 40%;
+            padding-left: 3%;
+        }
+
+        .gd-main-left-01,
+        .gd-main-left-02 {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .gd-main-right-01,
+        .gd-main-right-02 {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .gd-main-left-01,
+        .gd-main-right-01 {
+            height: 250px;
+        }
+
+        .gd-main-left-02,
+        .gd-main-right-02 {
+            height: 250px;
+        }
+
+        .gd-main-title {
+            width: 100%;
+            height: 39px;
+            line-height: 39px;
+            background: #ecf4fd;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .gd-main-left-title {
+            width: 146px;;
+            height: 39px;
+            margin: 0;
+            padding: 0;
+            line-height: 39px;
+            text-align: center;
+            background: url('static/images/home/zt_bj.png') no-repeat left center;
+            font-family: "微软雅黑";
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffffff;
+            float: left;
+        }
+
+        .gd-main-right-more {
+            width: 50px;
+            height: 39px;
+            margin: 0 10px 0 0;
+            padding: 0;
+            line-height: 39px;
+            float: right;
+        }
+
+        .gd-main-top-content {
+            width: 100%;
+            height: 210px;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .gd-con {
+            width: 100%;
+            height: 26px;
+            line-height: 26px;
+            overflow: hidden;
+        }
+
+        .left-content {
+            width: 80%;
+            height: 26px;
+            line-height: 26px;
+            overflow: hidden;
+            background: url('static/images/home/arrow.gif') no-repeat left center;
+            margin: 0;
+            padding-left: 15px;
+            float: left;
+        }
+
+        .right-desc {
+            width: 18%;
+            height: 26px;
+            line-height: 26px;
+            overflow: hidden;
+            text-align: right;
+            margin: 0 2% 0 0;
+            padding: 0;
+            float: right;
+        }
+
+        .left-bottom {
+            width: 45%;
+            height: 20px;
+            overflow: hidden;
+            float: left;
+            padding-left: 15px;
+            margin-bottom: 10px;
+        }
+
+        .right-bottom {
+            width: 45%;
+            height: 20px;
+            overflow: hidden;
+            float: right;
+            margin-bottom: 10px;
+            padding-right: 15px;
+            text-align: right;
+        }
+
+        .scroll {
+            position: relative;
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            cursor: pointer;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .scroll ul {
+            position: relative;
+            line-height: 26px;
+            list-style-type: none;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="content" >
+    <img src="img/基奥沙2.png" style="height:60px;"/>
+    <label style="font-size:35px;height:40px;color:#1e1dfd">基奥沙大学生创新创业项目管理系统</label>
+    <a href="main.jsp" style="font-size:25px;height:40px;color:#1e1dfd;margin-left: 300px">通知公告</a>
+    <a href="main.jsp" style="font-size:25px;height:40px;color:#1e1dfd;margin-left: 30px">历年项目</a>
+</div>
+
+<div class="gd-container">
+    <div class="gd-main">
+        <div class="gd-main-left">
+            <div class="gd-main-left-01">
+                <div class="gd-main-title">
+                    <div class="gd-main-left-title">
+                        通知公告
+                    </div>
+                    <div class="gd-main-right-more">
+                        <a href="/goShowInformMore.do">
+                            <img src="static/images/home/more.gif" height="39px" width="50px"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="gd-main-top-content">
+                </div>
+            </div>
+            <div class="gd-main-left-02">
+                <div class="gd-main-title">
+                    <div class="gd-main-left-title">
+                        历届项目
+                    </div>
+                    <div class="gd-main-right-more">
+                        <a href="/goShowItemMore.do">
+                            <img src="static/images/home/more.gif" height="39px" width="50px"/>
+                        </a>
+                    </div>
+                </div>
+                <!--style="margin-top: 10px; height: 200px; overflow: hidden; line-height: 45px;"/
+                style="margin-top:0!important"
+                -->
+                <div class="gd-main-bottom-content scroll">
+                    <ul class="list-unstyled">
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="./js/jquery-1.11.3.min.js"></script>
+
+
+</body>
+</html>
